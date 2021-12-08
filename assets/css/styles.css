@@ -1,0 +1,12 @@
+.flex-viewport{
+   max-height: 450px;
+}
+.flexslider .flex-control-nav li img{
+   height: 160px !important;
+   width: 100% !important;
+   object-fit: cover;
+}
+.img-slide{
+   height: 450px !important;
+   object-fit: cover;
+}

@@ -5,6 +5,7 @@ require_once 'config/database.php';
 require_once 'config/parameters.php';
 require_once 'autoload.php';
 require_once 'helpers/utils.php';
+require 'vendor/autoload.php';
 
 function show_error(){
     $error = new ErrorController();
@@ -30,10 +31,12 @@ if(class_exists($name_controller)){
         $controller->$action();
     }else{
         show_error();
+        
         exit();
     }
 }else{
     show_error();
+    
     exit();
 }
 

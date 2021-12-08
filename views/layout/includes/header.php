@@ -1,7 +1,76 @@
-<?php
 
-/* 
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
- */
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="shortcut icon" href="<?= APP_URL ?>assets/img/icon/icon.ico" type="image/x-icon">
+   <link rel="stylesheet"  href="<?= APP_URL ?>assets/bootstrap/css/bootstrap.css" />
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="FlexSlider/jquery.flexslider-min.js"></script>
+   <link rel="stylesheet" href="FlexSlider/flexslider.css">
+   <link rel="stylesheet" href="<?= APP_URL ?>assets/css/styles.css">
+
+   <title>Document</title>
+</head>
+
+<body>
+   <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+         <div class="container-fluid">
+            <a class="navbar-brand" href="<?= APP_URL?>home/index"><img src="<?= APP_URL ?>assets/img/logo.svg" alt="" style="width: 50px" />Phone</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+               <ul class="navbar-nav mx-auto g-0 gap-0">
+                  <li class="nav-item">
+                     <a class="nav-link active" href="<?= APP_URL?>home/index">Inicio</a>
+                  </li>
+
+                  <li class="nav-item">
+                     <a class="nav-link" href="">Envios</a>
+                  </li>
+
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Marcas</a>
+                  </li>
+
+                  <li class="nav-item">
+                     <a class="nav-link" href="<?= APP_URL?>catalog/index">Catalogo</a>
+                  </li>
+
+                  <li class="nav-item">
+                     <a class="nav-link" href="<?= APP_URL?>sale/index">detalles</a>
+                  </li>
+               </ul>
+               
+               <div class="">
+                  <a href="#" class="btn btn-outline-light me-2">Registro</a>
+                  <a href="#" class="btn btn-outline-light me-2">Ingresar</a>
+               </div>
+            </div>
+
+            <div class="dropdown text-end ">
+               <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="me-1">User</span><img src="<?= APP_URL ?>assets/img/user - grey.jpg" alt="mdo" width="32" height="32" class="rounded-circle">
+               </a>
+               <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                  <li><a class="dropdown-item" href="#">Perfil</a></li>
+                  <li>
+                     <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Salir</a></li>
+               </ul>
+            </div>
+
+
+         </div>
+      </nav>
+   </header>
