@@ -7,19 +7,21 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <link rel="shortcut icon" href="<?= APP_URL ?>assets/img/icon/icon.ico" type="image/x-icon">
-   <link rel="stylesheet"  href="<?= APP_URL ?>assets/bootstrap/css/bootstrap.css" />
+   <link rel="shortcut icon" href="<?=APP_URL?>assets/img/icon/icon.ico" type="image/x-icon">
+   <link rel="stylesheet"  href="<?=APP_URL?>assets/bootstrap/css/bootstrap.css" />
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   <script src="FlexSlider/jquery.flexslider-min.js"></script>
-   <link rel="stylesheet" href="FlexSlider/flexslider.css">
-   <link rel="stylesheet" href="<?= APP_URL ?>assets/css/styles.css">
-
-   <title>Document</title>
+   <script type="text/javascript" src="<?=APP_URL?>assets/vendors/FlexSlider/jquery.flexslider-min.js"></script>
+   <link rel="stylesheet" href="<?=APP_URL?>assets/vendors/FlexSlider/flexslider.css">
+   <link rel="stylesheet" type="text/css" href="<?=APP_URL?>assets/css/styles.css">
+   <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans:wght@300&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+   <title>Catalogo</title>
 </head>
 
 <body>
    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
          <div class="container-fluid">
             <a class="navbar-brand" href="<?= APP_URL?>home/index"><img src="<?= APP_URL ?>assets/img/logo.svg" alt="" style="width: 50px" />Phone</a>
 
@@ -42,7 +44,7 @@
                   </li>
 
                   <li class="nav-item">
-                     <a class="nav-link" href="<?= APP_URL?>catalog/index">Catalogo</a>
+                     <a class="nav-link" href="<?= APP_URL?>product/index">Catalogo</a>
                   </li>
 
                   <li class="nav-item">
@@ -69,8 +71,6 @@
                   <li><a class="dropdown-item" href="#">Salir</a></li>
                </ul>
             </div>
-
-
          </div>
       </nav>
    </header>

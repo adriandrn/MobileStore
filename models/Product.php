@@ -1,13 +1,5 @@
 <?php
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
- */
-
-class Product
-{
-
+class Product{
     private $id;
     private $vendor_id;
     private $brand_id;
@@ -126,47 +118,38 @@ class Product
     }
 
 
-
-    public function getAll()
-    {
-        $sql = "select p.*,i.path from products p join images i on p.id = i.product_id group by p.id limit 8";
+    //-------------------------------------------------------------------------------------------------------- 
+    public function getByAjax($brand = 1,$range,$year){
+        $sql = "select p.id,p.name,b.name as brand,r.gama as 'range',i.path,p.sale_price from products p join ranges r on p.range_id = r.id join brands b on p.brand_id = b.id join images i on p.id=i.product_id";
+        if($brand){
+            $sql .= " where brand_id=".$brand;
+        }
+        if($range){
+            $sql .= " and range_id=".$range;
+        }
+        if($year){
+            $sql .= " and year=".$year;
+        }
+        $sql .= " group by p.id LIMIT 10;";
         $products = $this->bd->query($sql);
         return $products;
     }
 
-    public function getAllNotLimit()
-    {
-        $sql = "select p.id,p.name,p.description,b.name as brand,r.gama as 'range',p.year,i.path,p.sale_price from products p join ranges r on p.range_id = r.id join brands b on p.brand_id = b.id join images i on p.id=i.product_id group by p.id;";
-        $products = $this->bd->query($sql);
-        return $products;
-    }
-
-    public function getAllByAjax($brand)
-    {
-        $sql = "select p.*,i.path from products p join images i on p.id = i.product_id where p.brand_id = $brand group by p.id limit 8";
-        $products = $this->bd->query($sql);
-        return $products;
-    }
-
-    public function getAllYear()
-    {
-        $sql = "select year from products group by year";
+    public function getAllYear(){
+        $sql = "select distinct(year) from products";
         $years = $this->bd->query($sql);
         return $years;
     }
 
-    public function getByRange($range)
-    {
-        $sql = "select p.id,p.name,p.description,b.name as brand,r.gama as 'range',p.year,i.path,p.sale_price from products p join ranges r on p.range_id = r.id join brands b on p.brand_id = b.id join images i on p.id=i.product_id where r.id = $range group by p.id;";
-        $products = $this->bd->query($sql);
-        return $products;
-    }
-
-    public function getById($id)
-    {
-        $sql = "select p.id,p.name,p.description,b.name as brand,r.gama as 'range',p.year,p.sale_price,pd.screen,pd.processor,pd.ram,pd.storage,pd.expansion,pd.camera,pd.battery,pd.os,pd.profile,pd.weight from products p join ranges r on p.range_id = r.id join brands b on p.brand_id = b.id  join product_details pd on p.id=pd.product_id where p.id = $id";
+    public function getById($id){
+        $sql = "select p.id,p.name,p.description,p.year,p.sale_price,b.name as brand,r.gama as 'range',pd.screen,pd.processor,pd.ram,pd.storage,pd.expansion,pd.camera,pd.battery,pd.os,pd.profile,pd.weight from products p join ranges r on p.range_id = r.id join brands b on p.brand_id = b.id  join product_details pd on p.id=pd.product_id where p.id = $id";
         $product = $this->bd->query($sql);
         return $product->fetch_object();
     }
-
+    
+    public function getImages($id){
+        $sql = "SELECT * FROM images WHERE product_id = $id";
+        $images = $this->bd->query($sql);
+        return $images;
+    }
 }

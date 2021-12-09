@@ -1,14 +1,3 @@
-
-
-<script src="<?= APP_URL ?>assets/js/todolist.js"></script>
-<script src="<?= APP_URL ?>assets/js/settings.js"></script>
-<script src="<?= APP_URL ?>assets/js/off-canvas.js"></script>
-<script src="<?= APP_URL ?>assets/js/misc.js"></script>
-<script src="<?= APP_URL ?>assets/js/hoverable-collapse.js"></script>
-<script src="<?= APP_URL ?>assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-</body>
-
 <div class="container-fluid px-0">
    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top ">
       <div class="col-md-4 d-flex align-items-center mx-3">
@@ -22,6 +11,12 @@
       </ul>
    </footer>
 </div>
-
-
+<script src="<?= APP_URL ?>assets/js/todolist.js"></script>
+<script src="<?= APP_URL ?>assets/js/settings.js"></script>
+<script src="<?= APP_URL ?>assets/js/off-canvas.js"></script>
+<script src="<?= APP_URL ?>assets/js/misc.js"></script>
+<script src="<?= APP_URL ?>assets/js/hoverable-collapse.js"></script>
+<script src="<?= APP_URL ?>assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+</body>
 </html>

@@ -1,22 +1,15 @@
 <?php require_once 'views/layout/includes/header.php'; ?>
-<section id="show-phone" class="mt-5">
+<section id="show-phone" class="">
     <div class="container">
         <div class="row">
             <div class="col-6">
                 <div class="flexslider">
                     <ul class="slides">
-                        <li data-thumb="phone.jpg">
-                            <img src="phone.jpg" class="img-slide">
-                        </li>
-                        <li data-thumb="phone2.jpg">
-                            <img src="phone2.jpg" class="img-slide">
-                        </li>
-                        <li data-thumb="phone3.jpg">
-                            <img src="phone3.jpg" class="img-slide">
-                        </li>
-                        <li data-thumb="phone4.jpg">
-                            <img src="phone4.jpg" class="img-slide">
-                        </li>
+                        <?php while($image = $images->fetch_object()):?>
+                            <li data-thumb="<?=APP_URL?>uploads/<?=$image->path?>">
+                                <img src="<?=APP_URL?>uploads/<?=$image->path?>" class="img-slide">
+                            </li>
+                        <?php endwhile;?>
                     </ul>
                 </div>
             </div>
