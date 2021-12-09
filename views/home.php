@@ -39,19 +39,19 @@
             <?php if ($products->num_rows > 0) : ?>
                 <?php while ($product = $products->fetch_object()) : ?>
                     <div class="col">
-                        <div class="card mb-2">
-                            <img src="<?=APP_URL?>assets/img/<?= $product->path?>" alt="" height="180px" style="object-fit: cover;">
-                            <div class="card-body">
-                                <h3 class="fs-4" style="overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2;"><?= $product->name ?></h3>
-                                <h5 class="fs-6"><span class="fw-bold">Marca:</span> <?= $product->brand ?></h5>
-                                <!-- <h5 class="fs-6"><span class="fw-bold">Año:</span> <?= $product->year ?></h5> -->
-                                <h6 class="fs-6"><span class="fw-bold">Gama:</span> <?= $product->range ?></h6>
-                                <!-- <p style="overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3;"><?= $product->description ?></p> -->
-                                <h5><?= $product->sale_price ?> $</h5>
-                                <a class="btn btn-danger d-block mx-auto text-light fs-5" href="<?=APP_URL?>product/show&id=<?=$product->id?>">Comprar ahora</a>
-                            </div>
+                    <div class="card mb-2">
+                        <img src="<?=APP_URL?>assets/img/<?= $product->path?>" alt="" height="140px" style="object-fit: cover;">
+                        <div class="card-body p-2">
+                            <h3 class="fs-5 my-0" style="overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2;"><?= $product->name ?></h3>
+                            <p class="fs-6 my-0"><span class="text-muted"><i class="fas fa-tags"></i> Marca:</span> <?= $product->brand ?></p>
+                            <p class="fs-6 my-0"><span class="text-muted"><i class="fab fa-weibo"></i> Gama:</span> <?= $product->range ?></p>
+                            <p class="text-success fs-5 fw-bold my-0 mb-2"><?=$product->sale_price?> $</p>
+                            <a class="btn btn-outline-dark d-block mx-auto fs-5" href="<?=APP_URL?>product/show&id=<?=$product->id?>" style="max-width:max-content">
+                                Ver Producto
+                            </a>
                         </div>
                     </div>
+                </div>
                 <?php endwhile; ?>
             <?php else : ?>
                 <div class="alert alert-danger">

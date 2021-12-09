@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -22,7 +21,7 @@
 
 <body>
    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-4">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
          <div class="container-fluid">
             <a class="navbar-brand" href="<?= APP_URL?>home/index"><img src="<?= APP_URL ?>assets/img/logo.svg" alt="" style="width: 50px" />Phone</a>
 
@@ -37,15 +36,15 @@
                   </li>
 
                   <li class="nav-item">
-                     <a class="nav-link" href="">Envios</a>
+                     <a class="nav-link" href="<?=APP_URL?>home/sends">Envios</a>
                   </li>
 
                   <li class="nav-item">
-                     <a class="nav-link" href="#">Marcas</a>
+                     <a class="nav-link" href="<?=APP_URL?>brand/index">Marcas</a>
                   </li>
 
                   <li class="nav-item">
-                     <a class="nav-link" href="<?= APP_URL?>product/index">Catalogo</a>
+                     <a class="nav-link" href="<?= APP_URL?>product/index">Productos</a>
                   </li>
 
                   <li class="nav-item">

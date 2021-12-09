@@ -14,3 +14,37 @@
    background-color:black !important;
    color:white !important;
 }
+.text-truncated{
+   overflow:hidden; 
+   text-overflow:ellipsis;
+   display:-webkit-box; 
+   -webkit-box-orient:vertical;
+   -webkit-line-clamp:2;
+}
+/* Envios */
+.ima1{
+   right: 650px;
+   position: absolute;
+}
+.ima2{
+      position: absolute;
+      top: 720px;
+      right: 650px;
+}
+.ima3{
+position: absolute; 
+right: 190px;
+}
+.texto_imag{
+   position: absolute;
+   top:15px;
+   left:220px;
+   width: 200px;
+   right: 20px;
+   border: 2px solid rgb(10, 10, 10);
+   background-color:white;
+   text-align:center;
+   border-radius:10px;
+   -moz-border-radius:10px;
+   -webkit-border-radius:10px;
+}

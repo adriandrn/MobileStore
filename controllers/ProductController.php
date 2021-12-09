@@ -18,10 +18,10 @@ class ProductController{
     }
     public function show(){
         $id = $_GET['id'];
-        $product = new Product();
-        $images = $product->getImages($id);
-
-        $product = $product->getById($id);
+        $product_instance = new Product();
+        $product = $product_instance->getById($id);
+        $images = $product_instance->getImages($id);
+        $similar = $product_instance->getSimilar($product->brand_id,$product->id);
 
         include 'views/products/show.php';
     }

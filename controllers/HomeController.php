@@ -18,4 +18,7 @@ class HomeController{
         $dompdf->render();
         $dompdf->stream();
     }
+    public function sends(){
+        include 'views/sends/index.php';
+    }
 }

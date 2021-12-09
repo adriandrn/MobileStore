@@ -142,7 +142,7 @@ class Product{
     }
 
     public function getById($id){
-        $sql = "select p.id,p.name,p.description,p.year,p.sale_price,b.name as brand,r.gama as 'range',pd.screen,pd.processor,pd.ram,pd.storage,pd.expansion,pd.camera,pd.battery,pd.os,pd.profile,pd.weight from products p join ranges r on p.range_id = r.id join brands b on p.brand_id = b.id  join product_details pd on p.id=pd.product_id where p.id = $id";
+        $sql = "select p.id,p.name,p.description,p.year,p.sale_price,p.brand_id,p.stock,b.name as brand,r.gama as 'range',pd.screen,pd.processor,pd.ram,pd.storage,pd.expansion,pd.camera,pd.battery,pd.os,pd.profile,pd.weight from products p join ranges r on p.range_id = r.id join brands b on p.brand_id = b.id  join product_details pd on p.id=pd.product_id where p.id = $id";
         $product = $this->bd->query($sql);
         return $product->fetch_object();
     }
@@ -151,5 +151,10 @@ class Product{
         $sql = "SELECT * FROM images WHERE product_id = $id";
         $images = $this->bd->query($sql);
         return $images;
+    }
+    public function getSimilar($brand_id,$id){
+        $sql = "select p.id,p.name,p.description,p.sale_price,b.name as brand,r.gama as 'range' from products p join ranges r on p.range_id = r.id join brands b on p.brand_id = b.id where p.brand_id = $brand_id and p.id!=$id order by 1 limit 5";
+        $products = $this->bd->query($sql);
+        return $products;
     }
 }
