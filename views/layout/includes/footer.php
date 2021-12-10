@@ -1,7 +1,7 @@
 
 
-<div class="container-fluid">
-  <footer class="py-5 pb-0 mb-0 bg-dark text-light px-4">
+<div class="container-fluid bg-dark">
+  <footer class="py-5 pb-0 mx-3 text-light ">
     <div class="row">
       <div class="col-2">
         <h5>Section</h5>

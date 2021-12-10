@@ -22,7 +22,7 @@
    <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
          <div class="container-fluid">
-            <a class="navbar-brand" href="<?= APP_URL ?>home/index"><img src="<?= APP_URL ?>assets/img/logo.svg" alt="" style="width: 50px" />Phone</a>
+            <a class="navbar-brand" href="<?= APP_URL ?>home/index"><img src="<?= APP_URL ?>assets/img/logo.png" alt="" style="width: 35px" />Phone</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
@@ -46,6 +46,10 @@
                      <a class="nav-link" href="<?= APP_URL ?>home/sends">Sobre nosotros</a>
                   </li>
 
+                  <li class="nav-item">
+                     <a class="nav-link" href="<?= APP_URL ?>admin/index">Admin</a>
+                  </li>
+
                </ul>
                <?php if(!Utils::auth()):?>
                   <div class="">
@@ -65,7 +69,7 @@
                   <li>
                      <hr class="dropdown-divider">
                   </li>
-                  <li><a class="dropdown-item" href="<?=APP_URL?>authentication/logout">Salir</a></li>
+                  <li><a class="dropdown-item" href="<?=APP_URL?>authentication/logout">Cerra Sesion</a></li>
                </ul>
             </div>
             <?php endif;?>
