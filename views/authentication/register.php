@@ -101,7 +101,11 @@
                   </div>
                 </div>
                 <div class="form-group" style="height: 50px;margin-top:35px !important;">
-                  <label>Confirmar contraseña</label>
+                  <label>Confirmar contraseña
+                    <?php if(isset($_SESSION['register']['password-confirm'])):?>
+                      <span class="text-danger">(<?=$_SESSION['register']['password-confirm']?>)</span>
+                    <?php endif;?>
+                  </label>
                   <div class="input-group">
                     <div class="input-group-prepend bg-transparent">
                       <span class="input-group-text bg-transparent border-right-0">

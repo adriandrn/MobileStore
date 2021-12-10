@@ -32,7 +32,7 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, reiciendis quisquam dolor neque nesciunt a? Ut expedita quae aliquid esse aspernatur fuga odio excepturi, labore animi similique recusandae? Sed saepe voluptates ipsam commodi. Recusandae dignissimos voluptatem saepe at cupiditate maiores doloremque magnam sit itaque ducimus, accusamus culpa aut quas incidunt!</p>
         <ul class="list-unstyled" style="border-bottom:1px solid #ccc;max-width:max-content;">
             <?php while ($brand = $brands->fetch_object()) : ?>
-                <li class="btn fs-6" <?=$brand->id==1 ? 'style="border-bottom:2px solid #605b5b;color:#605b5b !important;font-weight:bold;"' : ''?> onclick="getByAjax(<?= $brand->id ?>)"><?= $brand->name ?></li>
+                <li class="btn rounded-0 fs-6 <?=$brand->id==1 ? 'btn-ajax-active' : ''?>" onclick="getByAjax(<?=$brand->id?>)" id="item-<?=$brand->id?>"><?= $brand->name ?></li>
             <?php endwhile; ?>
         </ul>
         <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 row-cols-lg-4 row-cols-xl-5" id="cards-container">
@@ -97,6 +97,15 @@
 
 <script>
     function getByAjax(brand_id) {
+        let selector;
+        selector = "#item-"+brand_id;
+        $(selector).addClass("btn-ajax-active");
+        for(let i=1;i<= <?=$brands->num_rows?>;i++){
+            if(i!=brand_id){
+                selector = "#item-"+i;
+                $(selector).removeClass("btn-ajax-active");
+            }
+        }
         $.ajax({
             url: "<?=APP_URL?>product/getByAjax&brand_id="+brand_id,
             type: "GET",

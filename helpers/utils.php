@@ -17,5 +17,12 @@ class Utils{
     public static function auth(){
         return isset($_SESSION['user']) ? $_SESSION['user'] : false;
     }
+    public static function getUrl($search){
+        $url = "http://" . $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
+        if(str_contains($url,$search)){
+            return true;
+        }
+        return false;
+    }
 }
 ?>
