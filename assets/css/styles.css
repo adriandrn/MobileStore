@@ -22,29 +22,16 @@
    -webkit-line-clamp:2;
 }
 /* Envios */
-.ima1{
-   right: 650px;
-   position: absolute;
+.btn-ajax-active{
+   border-bottom:2px solid #605b5b;
+   color:#605b5b !important;
+   font-weight:bold;
 }
-.ima2{
-      position: absolute;
-      top: 720px;
-      right: 650px;
+.swiper-button-next::after, .swiper-rtl .swiper-button-prev::after{
+   color:#ccc !important;
+   font-size: 25px !important;
 }
-.ima3{
-position: absolute; 
-right: 190px;
-}
-.texto_imag{
-   position: absolute;
-   top:15px;
-   left:220px;
-   width: 200px;
-   right: 20px;
-   border: 2px solid rgb(10, 10, 10);
-   background-color:white;
-   text-align:center;
-   border-radius:10px;
-   -moz-border-radius:10px;
-   -webkit-border-radius:10px;
+.swiper-button-prev::after, .swiper-rtl .swiper-button-next::after{
+   color:#ccc !important;
+   font-size: 25px !important;
 }

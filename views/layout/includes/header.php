@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
    <meta charset="UTF-8" />
    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -31,19 +30,19 @@
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
                <ul class="navbar-nav mx-auto g-0 gap-0">
                   <li class="nav-item">
-                     <a class="nav-link active" href="<?= APP_URL ?>home/index">Inicio</a>
+                     <a class="nav-link <?=Utils::getUrl('home/index') ? 'active' : ''?>" href="<?= APP_URL ?>home/index">Inicio</a>
                   </li>
 
                   <li class="nav-item">
-                     <a class="nav-link" href="<?= APP_URL ?>product/index">Productos</a>
+                     <a class="nav-link <?=Utils::getUrl('product/index') ? 'active' : ''?>" href="<?= APP_URL ?>product/index">Productos</a>
                   </li>
 
                   <li class="nav-item">
-                     <a class="nav-link" href="<?= APP_URL ?>brand/index">Marcas</a>
+                     <a class="nav-link <?=Utils::getUrl('brand/index') ? 'active' : ''?>" href="<?= APP_URL ?>brand/index">Marcas</a>
                   </li>                
 
                   <li class="nav-item">
-                     <a class="nav-link" href="<?= APP_URL ?>home/sends">Sobre nosotros</a>
+                     <a class="nav-link <?=Utils::getUrl('home/sends') ? 'active' : ''?>" href="<?= APP_URL ?>home/sends">Sobre nosotros</a>
                   </li>
 
                   <li class="nav-item">
@@ -75,4 +74,5 @@
             <?php endif;?>
          </div>
       </nav>
+      
    </header>

@@ -53,6 +53,7 @@ class AuthenticationController
       $phone = isset($_POST["phone"]) ? $_POST["phone"] : false;
       $address = isset($_POST["address"]) ? $_POST["address"] : false;
       $password = isset($_POST["password"]) ? $_POST["password"] : false;
+      $password_confirm = isset($_POST["password-confirm"]) ? $_POST["password-confirm"] : false;
       // --------------------------------------------------------------------------------
       $errors = [];
       if(!$name || is_numeric($name) || preg_match('/[0-9\.\-\_\/\'\"\@\#]/',$name)){
@@ -69,6 +70,9 @@ class AuthenticationController
       }
       if(!$password){
          $errors['password'] = "Contraseña no valida";
+      }
+      if(!$password_confirm || $password_confirm!=$password){
+         $errors['password-confirm'] = "Verifique la contraseña";
       }
       // ----------------------------------------------------------------------------------
       if(count($errors)==0){
