@@ -17,6 +17,9 @@ class Utils{
     public static function auth(){
         return isset($_SESSION['user']) ? $_SESSION['user'] : false;
     }
+    public static function admin(){
+        return isset($_SESSION['admin']) ? true : false;
+    }
     public static function getUrl($search){
         $url = "http://" . $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
         if(str_contains($url,$search)){

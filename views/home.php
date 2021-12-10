@@ -42,11 +42,11 @@
                     <div class="card mb-2">
                         <img src="<?=APP_URL?>assets/img/<?= $product->path?>" alt="" height="140px" style="object-fit: cover;">
                         <div class="card-body p-2">
-                            <h3 class="fs-5 my-0" style="overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2;"><?= $product->name ?></h3>
+                            <h3 class="fs-6 my-0" style="overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2;"><?= $product->name ?></h3>
                             <p class="fs-6 my-0"><span class="text-muted"><i class="fas fa-tags"></i> Marca:</span> <?= $product->brand ?></p>
                             <p class="fs-6 my-0"><span class="text-muted"><i class="fab fa-weibo"></i> Gama:</span> <?= $product->range ?></p>
                             <p class="text-success fs-5 fw-bold my-0 mb-2"><?=$product->sale_price?> $</p>
-                            <a class="btn btn-outline-dark d-block mx-auto fs-5" href="<?=APP_URL?>product/show&id=<?=$product->id?>" style="max-width:max-content">
+                            <a class="btn btn-outline-dark d-block mx-auto fs-6" href="<?=APP_URL?>product/show&id=<?=$product->id?>" style="max-width:max-content">
                                 Ver Producto
                             </a>
                         </div>
