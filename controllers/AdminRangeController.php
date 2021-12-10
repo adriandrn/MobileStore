@@ -1,24 +1,4 @@
 <?php
-<<<<<<< HEAD
-
-class AdminRangeController
-{
-   public function index()
-   {
-      include 'views/admin/ranges/index.php';
-   }
-
-   public function create()
-   {
-      include 'views/admin/ranges/create.php';
-   }
-
-   public function edit()
-   {
-      include 'views/admin/ranges/edit.php';
-   }
-}
-=======
 require_once 'models/Range.php';
 
 class AdminRangeController{
@@ -51,4 +31,3 @@ class AdminRangeController{
 }
 
 ?>
->>>>>>> 38bd94732b6f97037bc4beeb4c8e7d36d9977647

@@ -1,29 +1,4 @@
 <?php
-<<<<<<< HEAD
-
-class AdminProductController
-{
-   public function index()
-   {
-      include 'views/admin/products/index.php';
-   }
-
-   public function create()
-   {
-      include 'views/admin/products/create.php';
-   }
-
-   public function edit()
-   {
-      include 'views/admin/products/edit.php';
-   }
-
-   public function delete()
-   {
-      
-   }
-}
-=======
 require_once 'models/Product.php';
 
 class AdminProductController{
@@ -56,4 +31,3 @@ class AdminProductController{
 }
 
 ?>
->>>>>>> 38bd94732b6f97037bc4beeb4c8e7d36d9977647
