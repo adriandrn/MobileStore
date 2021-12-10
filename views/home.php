@@ -30,9 +30,9 @@
     <div class="container">
         <h1>Te invitamos a revizar algunos de nuestros productos</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, reiciendis quisquam dolor neque nesciunt a? Ut expedita quae aliquid esse aspernatur fuga odio excepturi, labore animi similique recusandae? Sed saepe voluptates ipsam commodi. Recusandae dignissimos voluptatem saepe at cupiditate maiores doloremque magnam sit itaque ducimus, accusamus culpa aut quas incidunt!</p>
-        <ul class="list-unstyled">
+        <ul class="list-unstyled" style="border-bottom:1px solid #ccc;max-width:max-content;">
             <?php while ($brand = $brands->fetch_object()) : ?>
-                <li class="btn btn-sm btn-secondary" onclick="getByAjax(<?= $brand->id ?>)"><?= $brand->name ?></li>
+                <li class="btn fs-6" <?=$brand->id==1 ? 'style="border-bottom:2px solid #605b5b;color:#605b5b !important;font-weight:bold;"' : ''?> onclick="getByAjax(<?= $brand->id ?>)"><?= $brand->name ?></li>
             <?php endwhile; ?>
         </ul>
         <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 row-cols-lg-4 row-cols-xl-5" id="cards-container">

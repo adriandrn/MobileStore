@@ -47,16 +47,17 @@
                   </li>
 
                </ul>
-
-               <div class="">
-                  <a href="<?= APP_URL ?>authentication/register" class="btn btn-outline-light me-2">Registro</a>
-                  <a href="<?= APP_URL ?>authentication/login" class="btn btn-outline-light me-2">Ingresar</a>
-               </div>
+               <?php if(!Utils::auth()):?>
+                  <div class="">
+                     <a href="<?= APP_URL ?>authentication/register" class="btn btn-outline-light me-2">Registro</a>
+                     <a href="<?= APP_URL ?>authentication/login" class="btn btn-outline-light me-2">Ingresar</a>
+                  </div>
+               <?php endif;?>
             </div>
-
+            <?php if(Utils::auth()):?>
             <div class="dropdown text-end ">
                <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                  <span class="me-1">User</span><img src="<?= APP_URL ?>assets/img/user - grey.jpg" alt="mdo" width="32" height="32" class="rounded-circle">
+                  <span class="me-1"><?=Utils::auth()->name?></span><img src="<?= APP_URL ?>assets/img/user - grey.jpg" alt="mdo" width="32" height="32" class="rounded-circle">
                </a>
                <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
                   <li><a class="dropdown-item" href="#">Settings</a></li>
@@ -64,9 +65,10 @@
                   <li>
                      <hr class="dropdown-divider">
                   </li>
-                  <li><a class="dropdown-item" href="#">Salir</a></li>
+                  <li><a class="dropdown-item" href="<?=APP_URL?>authentication/logout">Salir</a></li>
                </ul>
             </div>
+            <?php endif;?>
          </div>
       </nav>
    </header>
