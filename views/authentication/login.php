@@ -1,26 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Melody Admin</title>
-  <!-- plugins:css -->
-  <link rel="stylesheet" href="vendors/iconfonts/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
-  <link rel="stylesheet" href="vendors/css/vendor.bundle.addons.css">
+  <title>Ingreso</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- endinject -->
-  <!-- plugin css for this page -->
-  <!-- End plugin css for this page -->
-  <!-- inject:css -->
   <link rel="stylesheet" href="../assets/css/style.css">
-  <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
 </head>
 
 <body>
+
+  <?php
+    $errors = $_SESSION['errors'];
+    var_dump($errors);
+  ?>
+
   <div class="container-scroller">
     <div class="container-fluid page-body-wrapper full-page-wrapper">
       <div class="content-wrapper d-flex align-items-stretch auth auth-img-bg">
@@ -28,44 +24,38 @@
           <div class="col-lg-6 d-flex align-items-center justify-content-center">
             <div class="auth-form-transparent text-left p-3">
               <div class="brand-logo">
-                <img src="images/logo.svg" alt="logo">
+                <img src="../assets/img/logo.png" alt="logo" class="">
               </div>
-              <h4>Welcome back!</h4>
-              <h6 class="font-weight-light">Happy to see you again!</h6>
-              <form class="pt-3">
-                <div class="form-group">
-                  <label for="exampleInputEmail">Username</label>
+              <h4>Bienvenido</h4>
+              <h6 class="font-weight-light">Disfruta tu estadia</h6>
+              <form class="pt-3" action="<?= APP_URL ?>authentication/loginStore" method="POST">
+                <div class="form-group" style="height: 50px;">
+                  <label for="exampleInputEmail">Correo electronico</label>
                   <div class="input-group">
                     <div class="input-group-prepend bg-transparent">
                       <span class="input-group-text bg-transparent border-right-0">
                         <i class="fa fa-user text-primary"></i>
                       </span>
                     </div>
-                    <input type="text" class="form-control form-control-lg border-left-0" id="exampleInputEmail" placeholder="Username">
+                    <input type="email" class="form-control form-control-sm border-left-0" name="email" id="exampleInputEmail" placeholder="Email">
                   </div>
                 </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword">Password</label>
+                <div class="form-group" style="height: 50px;">
+                  <label for="exampleInputPassword">Contraseña</label>
                   <div class="input-group">
                     <div class="input-group-prepend bg-transparent">
                       <span class="input-group-text bg-transparent border-right-0">
                         <i class="fa fa-lock text-primary"></i>
                       </span>
                     </div>
-                    <input type="password" class="form-control form-control-lg border-left-0" id="exampleInputPassword" placeholder="Password">                        
+                    <input type="password" class="form-control form-control-sm border-left-0" name="password" id="exampleInputPassword" placeholder="Contraseña">
                   </div>
                 </div>
                 <div class="my-2 d-flex justify-content-between align-items-center">
-                  <div class="ml-4" >
-                    <label class="form-check-label text-muted">
-                      <input type="checkbox" class="form-check-input">
-                      Keep me signed in
-                    </label>
-                  </div>
-                  <a href="#" class="auth-link text-black">Forgot password?</a>
+                  <a href="#" class="auth-link text-black">Olvido su contraseña?</a>
                 </div>
-                <div class="my-3">
-                  <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="../../index.html">LOGIN</a>
+                <div class="my-2">
+                  <button type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium ">INGRESAR</button>
                 </div>
                 <div class="mb-2 d-flex">
                   <button type="button" class="btn btn-facebook auth-form-btn flex-grow mr-1">
@@ -76,32 +66,18 @@
                   </button>
                 </div>
                 <div class="text-center mt-4 font-weight-light">
-                  Don't have an account? <a href="register-2.html" class="text-primary">Create</a>
+                  No tienes una cuenta? <a href="<?= APP_URL ?>authentication/register" class="text-primary">Crear</a>
                 </div>
               </form>
             </div>
           </div>
-          <div class="col-lg-6 login-half-bg d-flex flex-row">
-            <p class="text-white font-weight-medium text-center flex-grow align-self-end">Copyright &copy; 2018  All rights reserved.</p>
+          <div class="col-lg-6 d-flex align-items-center justify-content-center">
+            <img src="../assets/img/auth/login-bg.jpg" height="100%" alt="">
           </div>
         </div>
       </div>
-      <!-- content-wrapper ends -->
     </div>
-    <!-- page-body-wrapper ends -->
   </div>
-  <!-- container-scroller -->
-  <!-- plugins:js -->
-  <script src="vendors/js/vendor.bundle.base.js"></script>
-  <script src="vendors/js/vendor.bundle.addons.js"></script>
-  <!-- endinject -->
-  <!-- inject:js -->
-  <script src="js/off-canvas.js"></script>
-  <script src="js/hoverable-collapse.js"></script>
-  <script src="js/misc.js"></script>
-  <script src="js/settings.js"></script>
-  <script src="js/todolist.js"></script>
-  <!-- endinject -->
 </body>
 
 </html>

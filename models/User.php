@@ -1,6 +1,6 @@
 <?php
 
-class Usuario {
+class User {
 
     private $id;
     private $ci;
@@ -65,7 +65,7 @@ class Usuario {
     }
 
     public function setEmail($email): void {
-        $this->email = $email;
+        $this->email = $this->db->real_escape_string($email);
     }
 
     public function setPhone($phone): void {
@@ -81,7 +81,7 @@ class Usuario {
     }
 
     public function setPassword($password): void {
-        $this->password = $password;
+        $this->password = $this->db->real_escape_string($password);
     }
 
     public function setDb($db): void {

@@ -5,15 +5,14 @@
    <meta charset="UTF-8" />
    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <link rel="shortcut icon" href="<?=APP_URL?>assets/img/icon/icon.ico" type="image/x-icon">
-   <link rel="stylesheet"  href="<?=APP_URL?>assets/bootstrap/css/bootstrap.css" />
+   <link rel="shortcut icon" href="<?= APP_URL ?>assets/img/icon/icon.ico" type="image/x-icon">
+   <link rel="stylesheet" href="<?= APP_URL ?>assets/bootstrap/css/bootstrap.css" />
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   <script type="text/javascript" src="<?=APP_URL?>assets/vendors/FlexSlider/jquery.flexslider-min.js"></script>
-   <link rel="stylesheet" href="<?=APP_URL?>assets/vendors/FlexSlider/flexslider.css">
-   <link rel="stylesheet" type="text/css" href="<?=APP_URL?>assets/css/styles.css">
+   <script type="text/javascript" src="<?= APP_URL ?>assets/vendors/FlexSlider/jquery.flexslider-min.js"></script>
+   <link rel="stylesheet" href="<?= APP_URL ?>assets/vendors/FlexSlider/flexslider.css">
+   <link rel="stylesheet" type="text/css" href="<?= APP_URL ?>assets/css/styles.css">
    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans:wght@300&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    <title>Catalogo</title>
@@ -23,7 +22,7 @@
    <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
          <div class="container-fluid">
-            <a class="navbar-brand" href="<?= APP_URL?>home/index"><img src="<?= APP_URL ?>assets/img/logo.svg" alt="" style="width: 50px" />Phone</a>
+            <a class="navbar-brand" href="<?= APP_URL ?>home/index"><img src="<?= APP_URL ?>assets/img/logo.svg" alt="" style="width: 50px" />Phone</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
@@ -32,29 +31,26 @@
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
                <ul class="navbar-nav mx-auto g-0 gap-0">
                   <li class="nav-item">
-                     <a class="nav-link active" href="<?= APP_URL?>home/index">Inicio</a>
+                     <a class="nav-link active" href="<?= APP_URL ?>home/index">Inicio</a>
                   </li>
 
                   <li class="nav-item">
-                     <a class="nav-link" href="<?=APP_URL?>home/sends">Envios</a>
+                     <a class="nav-link" href="<?= APP_URL ?>product/index">Productos</a>
                   </li>
 
                   <li class="nav-item">
-                     <a class="nav-link" href="<?=APP_URL?>brand/index">Marcas</a>
-                  </li>
+                     <a class="nav-link" href="<?= APP_URL ?>brand/index">Marcas</a>
+                  </li>                
 
                   <li class="nav-item">
-                     <a class="nav-link" href="<?= APP_URL?>product/index">Productos</a>
+                     <a class="nav-link" href="<?= APP_URL ?>home/sends">Sobre nosotros</a>
                   </li>
 
-                  <li class="nav-item">
-                     <a class="nav-link" href="<?= APP_URL?>sale/index">detalles</a>
-                  </li>
                </ul>
-               
+
                <div class="">
-                  <a href="#" class="btn btn-outline-light me-2">Registro</a>
-                  <a href="#" class="btn btn-outline-light me-2">Ingresar</a>
+                  <a href="<?= APP_URL ?>authentication/register" class="btn btn-outline-light me-2">Registro</a>
+                  <a href="<?= APP_URL ?>authentication/login" class="btn btn-outline-light me-2">Ingresar</a>
                </div>
             </div>
 

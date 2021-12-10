@@ -1,15 +1,63 @@
-<div class="container-fluid px-0">
-   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top ">
-      <div class="col-md-4 d-flex align-items-center mx-3">
-         <span class="text-muted">&copy; 2021 Company, Inc</span>
+
+
+<div class="container-fluid">
+  <footer class="py-5 pb-0 mb-0 bg-dark text-light px-4">
+    <div class="row">
+      <div class="col-2">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
       </div>
 
-      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex mx-3">
-         <li class="ms-3"><a class="text-muted" href="https://facebook.com"><i class="fab fa-facebook fa-2x"></i></a></li>
-         <li class="ms-3"><a class="text-muted" href="https://instagram.com"><i class="fab fa-instagram fa-2x"></i></a></li>
-         <li class="ms-3"><a class="text-muted" href="https://twiter.com"><i class="fab fa-twitter fa-2x"></i></a></li>
+      <div class="col-2">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-2">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-4 offset-1">
+        <form>
+          <h5>Subscribe to our newsletter</h5>
+          <p>Monthly digest of whats new and exciting from us.</p>
+          <div class="d-flex w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <button class="btn btn-primary" type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-between pt-4  mt-4 border-top">
+      <p>&copy; 2021 Company, Inc. All rights reserved.</p>
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
       </ul>
-   </footer>
+    </div>
+  </footer>
 </div>
 <script src="<?= APP_URL ?>assets/js/todolist.js"></script>
 <script src="<?= APP_URL ?>assets/js/settings.js"></script>
