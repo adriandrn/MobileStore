@@ -1,7 +1,7 @@
 <?php
 require_once 'models/User.php';
 
-class AdminProductController{
+class AdminUserController{
     public function index(){
         $user = new Product();
         // $users = $user->getAll();
