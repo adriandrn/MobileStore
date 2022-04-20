@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
    <meta charset="UTF-8" />
    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -30,19 +31,19 @@
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
                <ul class="navbar-nav mx-auto g-0 gap-0">
                   <li class="nav-item">
-                     <a class="nav-link <?=Utils::getUrl('home/index') ? 'active' : ''?>" href="<?= APP_URL ?>home/index">Inicio</a>
+                     <a class="nav-link <?= Utils::getUrl('home/index') ? 'active' : '' ?>" href="<?= APP_URL ?>home/index">Inicio</a>
                   </li>
 
                   <li class="nav-item">
-                     <a class="nav-link <?=Utils::getUrl('product/index') ? 'active' : ''?>" href="<?= APP_URL ?>product/index">Productos</a>
+                     <a class="nav-link <?= Utils::getUrl('product/index') ? 'active' : '' ?>" href="<?= APP_URL ?>product/index">Productos</a>
                   </li>
 
                   <li class="nav-item">
-                     <a class="nav-link <?=Utils::getUrl('brand/index') ? 'active' : ''?>" href="<?= APP_URL ?>brand/index">Marcas</a>
-                  </li>                
+                     <a class="nav-link <?= Utils::getUrl('brand/index') ? 'active' : '' ?>" href="<?= APP_URL ?>brand/index">Marcas</a>
+                  </li>
 
                   <li class="nav-item">
-                     <a class="nav-link <?=Utils::getUrl('home/sends') ? 'active' : ''?>" href="<?= APP_URL ?>home/sends">Sobre nosotros</a>
+                     <a class="nav-link <?= Utils::getUrl('home/sends') ? 'active' : '' ?>" href="<?= APP_URL ?>home/sends">Sobre nosotros</a>
                   </li>
 
                   <li class="nav-item">
@@ -50,29 +51,29 @@
                   </li>
 
                </ul>
-               <?php if(!Utils::auth()):?>
+               <?php if (!Utils::auth()) : ?>
                   <div class="">
                      <a href="<?= APP_URL ?>authentication/register" class="btn btn-outline-light me-2">Registro</a>
                      <a href="<?= APP_URL ?>authentication/login" class="btn btn-outline-light me-2">Ingresar</a>
                   </div>
-               <?php endif;?>
+               <?php endif; ?>
             </div>
-            <?php if(Utils::auth()):?>
-            <div class="dropdown text-end ">
-               <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                  <span class="me-1"><?=Utils::auth()->name?></span><img src="<?= APP_URL ?>assets/img/user - grey.jpg" alt="mdo" width="32" height="32" class="rounded-circle">
-               </a>
-               <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                  <li><a class="dropdown-item" href="#">Settings</a></li>
-                  <li><a class="dropdown-item" href="#">Perfil</a></li>
-                  <li>
-                     <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="<?=APP_URL?>authentication/logout">Cerra Sesion</a></li>
-               </ul>
-            </div>
-            <?php endif;?>
+            <?php if (Utils::auth()) : ?>
+               <div class="dropdown text-end ">
+                  <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                     <span class="me-1"><?= Utils::auth()->name ?></span><img src="<?= APP_URL ?>assets/img/user - grey.jpg" alt="mdo" width="32" height="32" class="rounded-circle">
+                  </a>
+                  <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                     <li><a class="dropdown-item" href="#">Settings</a></li>
+                     <li><a class="dropdown-item" href="#">Perfil</a></li>
+                     <li>
+                        <hr class="dropdown-divider">
+                     </li>
+                     <li><a class="dropdown-item" href="<?= APP_URL ?>authentication/logout">Cerra Sesion</a></li>
+                  </ul>
+               </div>
+            <?php endif; ?>
          </div>
       </nav>
-      
+
    </header>

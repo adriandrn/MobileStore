@@ -1,5 +1,6 @@
 <?php
-class Product{
+class Product
+{
     private $id;
     private $vendor_id;
     private $brand_id;
@@ -119,40 +120,45 @@ class Product{
 
 
     //-------------------------------------------------------------------------------------------------------- 
-    public function getByAjax($brand = 1,$range,$year){
-        $sql = "select p.id,p.name,b.name as brand,r.gama as 'range',i.path,p.sale_price from products p join ranges r on p.range_id = r.id join brands b on p.brand_id = b.id join images i on p.id=i.product_id";
-        if($brand){
-            $sql .= " where brand_id=".$brand;
-        }
-        if($range){
-            $sql .= " and range_id=".$range;
-        }
-        if($year){
-            $sql .= " and year=".$year;
-        }
-        $sql .= " group by p.id LIMIT 10;";
-        $products = $this->bd->query($sql);
-        return $products;
-    }
+    // public function getByAjax($brand = 1, $range, $year)
+    // {
+    //     $sql = "select p.id,p.name,b.name as brand,r.gama as 'range',i.path,p.sale_price from products p join ranges r on p.range_id = r.id join brands b on p.brand_id = b.id join images i on p.id=i.product_id";
+    //     if ($brand) {
+    //         $sql .= " where brand_id=" . $brand;
+    //     }
+    //     if ($range) {
+    //         $sql .= " and range_id=" . $range;
+    //     }
+    //     if ($year) {
+    //         $sql .= " and year=" . $year;
+    //     }
+    //     $sql .= " group by p.id LIMIT 10;";
+    //     $products = $this->bd->query($sql);
+    //     return $products;
+    // }
 
-    public function getAllYear(){
+    public function getAllYear()
+    {
         $sql = "select distinct(year) from products";
         $years = $this->bd->query($sql);
         return $years;
     }
 
-    public function getById($id){
+    public function getById($id)
+    {
         $sql = "select p.id,p.name,p.description,p.year,p.sale_price,p.brand_id,p.stock,b.name as brand,r.gama as 'range',pd.screen,pd.processor,pd.ram,pd.storage,pd.expansion,pd.camera,pd.battery,pd.os,pd.profile,pd.weight from products p join ranges r on p.range_id = r.id join brands b on p.brand_id = b.id  join product_details pd on p.id=pd.product_id where p.id = $id";
         $product = $this->bd->query($sql);
         return $product->fetch_object();
     }
-    
-    public function getImages($id){
+
+    public function getImages($id)
+    {
         $sql = "SELECT * FROM images WHERE product_id = $id";
         $images = $this->bd->query($sql);
         return $images;
     }
-    public function getSimilar($brand_id,$id){
+    public function getSimilar($brand_id, $id)
+    {
         $sql = "select p.id,p.name,p.description,p.sale_price,b.name as brand,r.gama as 'range' from products p join ranges r on p.range_id = r.id join brands b on p.brand_id = b.id where p.brand_id = $brand_id and p.id!=$id order by 1 limit 5";
         $products = $this->bd->query($sql);
         return $products;
