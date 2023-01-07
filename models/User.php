@@ -70,6 +70,7 @@ class User {
             return $users;
         } else {
             return null;
+            
         }
     }
     public function register(){
